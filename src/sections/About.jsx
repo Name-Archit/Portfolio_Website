@@ -1,8 +1,7 @@
 const About = () => {
   return (
     <section id="about" className="max-w-7xl mx-auto px-8 py-24 space-y-32">
-
-      {/* ================= ABOUT ================= */}
+      
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
         <div className="lg:col-span-7 space-y-8">
@@ -29,8 +28,7 @@ const About = () => {
             </p>
           </div>
         </div>
-
-        {/* IMAGE */}
+        
         <div className="lg:col-span-5 relative">
           <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-secondary/10 blur-3xl opacity-30 rounded-full"></div>
 
@@ -43,8 +41,7 @@ const About = () => {
         </div>
 
       </div>
-
-      {/* ================= SKILLS ================= */}
+      
       <div className="space-y-16">
 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -59,8 +56,7 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-          {/* LANGUAGES */}
+          
           <div className="glass-panel p-8 rounded-3xl space-y-6">
             <h3 className="text-2xl font-bold uppercase">Languages</h3>
 
@@ -84,8 +80,7 @@ const About = () => {
               </div>
             ))}
           </div>
-
-          {/* FRAMEWORKS */}
+          
           <div className="glass-panel p-8 rounded-3xl space-y-6">
             <h3 className="text-2xl font-bold uppercase">Frameworks</h3>
 
@@ -109,8 +104,7 @@ const About = () => {
               </div>
             ))}
           </div>
-
-          {/* TOOLS */}
+          
           <div className="glass-panel p-8 rounded-3xl space-y-6">
             <h3 className="text-2xl font-bold uppercase">Tools</h3>
 
@@ -128,8 +122,7 @@ const About = () => {
 
         </div>
       </div>
-
-      {/* ================= STATS ================= */}
+      
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-16 border-y border-white/5">
         {[
           { label: "UPTIME", val: "99.9%", color: "text-primary" },

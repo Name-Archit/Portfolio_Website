@@ -2,8 +2,7 @@ const Projects = () => {
   return (
     <section className="max-w-7xl mx-auto px-6 py-32">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-
-        {/* BIG CARD */}
+        
         <div className="md:col-span-8 group relative overflow-hidden rounded-full bg-surface-container-low border border-white/5">
 
           <div className="aspect-[16/9] overflow-hidden">
@@ -25,8 +24,7 @@ const Projects = () => {
             </p>
           </div>
         </div>
-
-        {/* SIDE CARD */}
+        
         <div className="md:col-span-4 bg-surface-container-low border border-white/5 rounded-full p-10 flex flex-col justify-between">
           <div>
             <h3 className="text-xl font-headline font-bold text-on-surface mb-2">
@@ -49,8 +47,7 @@ const Projects = () => {
             </span>
           </div>
         </div>
-
-        {/* STATS */}
+        
         <div className="md:col-span-4 bg-surface-container-low border border-white/5 rounded-full p-10 flex flex-col items-center justify-center text-center">
           <span className="text-6xl font-headline font-bold text-primary">
             08+
@@ -59,8 +56,7 @@ const Projects = () => {
             YEARS_IN_THE_VOID
           </span>
         </div>
-
-        {/* SECOND CARD */}
+        
         <div className="md:col-span-8 group relative overflow-hidden rounded-full bg-surface-container-low border border-white/5">
 
           <div className="aspect-[21/9] overflow-hidden">
