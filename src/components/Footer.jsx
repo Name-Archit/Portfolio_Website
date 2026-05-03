@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3">
             <span className="material-symbols-outlined text-cyan-400">
-                    terminal
+                    <a href="/">terminal</a>
             </span>
             <span className="text-lg font-bold tracking-[0.3em] text-cyan-400 font-headline uppercase">                
-              ARCHIT NIRANJAN
+              <a href="/">ARCHIT</a>
             </span>
           </div>
 
@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="flex gap-6">
 
           <a
-            href="https://github.com"
+            href="https://github.com/Name-Archit"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-500 hover:text-cyan-400 transition text-xl hover:drop-shadow-[0_0_6px_rgba(0,210,255,0.6)]"
@@ -33,7 +33,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/archit-niranjan-0ba699238/3"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-500 hover:text-cyan-400 transition text-xl hover:drop-shadow-[0_0_6px_rgba(0,210,255,0.6)]"
@@ -42,20 +42,11 @@ const Footer = () => {
           </a>
 
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:architniranjan4455@gmail.com"
             className="text-neutral-500 hover:text-cyan-400 transition text-xl hover:drop-shadow-[0_0_6px_rgba(0,210,255,0.6)]"
           >
             <FaEnvelope />
-          </a>
-
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-neutral-500 hover:text-cyan-400 transition text-xl hover:drop-shadow-[0_0_6px_rgba(0,210,255,0.6)]"
-          >
-            <FaXTwitter />
-          </a>
+          </a>          
 
         </div>
 

@@ -5,14 +5,14 @@ const Projects = () => {
         
         <div className="md:col-span-8 group relative overflow-hidden rounded-full bg-surface-container-low border border-white/5">
 
-          <div className="aspect-[16/9] overflow-hidden">
+          <div className="aspect-video overflow-hidden">
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRWH5p94foGOyrGee-0DxM7iZWnLi73LCewjOEBwWAUBZVLiJ6HvS7h0iFFFVkxWVa8F-XywfaQC26PalZjwieK-RKjjjYMVwR-ACl3SkljSOXUtpd4P3N4sA1EZJhuKEvP7RSFIj2ejz8ZSEh4_Gddme5k0hAYvpNCDhC4YMQo7D3DEQMOq7z32Hep25P9pCvHHZexNMLCYkjrkAifl4pvwV_s6YDR3PN9i5TR82rdWJV7rx3DocbNt2UNPfhgbkdAa5vbItbY4Py"
+              src="./images/unnamed.png"
               className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition duration-700"
             />
           </div>
 
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent p-12 flex flex-col justify-end">
+          <div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-transparent to-transparent p-12 flex flex-col justify-end">
             <span className="text-[10px] tracking-[0.2em] text-primary mb-2">
               01 // CLOUD ARCHITECTURE
             </span>
@@ -59,14 +59,14 @@ const Projects = () => {
         
         <div className="md:col-span-8 group relative overflow-hidden rounded-full bg-surface-container-low border border-white/5">
 
-          <div className="aspect-[21/9] overflow-hidden">
+          <div className="aspect-21/9 overflow-hidden">
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuApjy-U5SSVKgjEAynEcWAEjpoNcZL3OTzmLYwWhumLOpu2xGERz0e6oscccFN8s2q29-lFnHA1aGa8-1WMEQxFXqw4TUetiMYheuWAD-YQ2F5Uz0ugxpco7qxD1o-epeq9nga01cndZ4Rji0RMRaF2tTq3WOGDbYpXVUgcUthSZ1U3yLHtAkY9W_o6RKIzJQjZ16DOhRHKnJU2_JNPH8dFQa7T0CczMSjOTsC2jmdwoYXD1wMPL2uMXSzCZOTgp4FBsUEif_8JQgE1"
+              src="./images/blueBulb.png"
               className="w-full h-full object-cover opacity-30 group-hover:scale-105 transition duration-700"
             />
           </div>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-surface-container-lowest to-transparent p-12 flex flex-col justify-center">
+          <div className="absolute inset-0 bg-linear-to-r from-surface-container-lowest to-transparent p-12 flex flex-col justify-center">
             <span className="text-[10px] text-secondary mb-2">
               02 // CYBERSEC
             </span>

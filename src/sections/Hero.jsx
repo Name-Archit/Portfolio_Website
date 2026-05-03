@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[795px] flex flex-col items-center justify-center pt-20 pb-32 overflow-hidden bg-background text-on-surface font-body">
+    <section className="relative min-h-198.75 flex flex-col items-center justify-center pt-20 pb-32 overflow-hidden bg-background text-on-surface font-body">
 
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-[120px]" />
@@ -21,11 +21,11 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         
         <div className="mb-8 inline-flex items-center gap-3">
-          <span className="w-12 h-[1px] bg-primary"></span>
+          <span className="w-12 h-px bg-primary"></span>
           <span className="text-xs tracking-[0.4em] uppercase text-on-surface-variant">
-            EST_2024 // VERSION_1.0.4
+            EST_2026 // VERSION_1.0.4
           </span>
-          <span className="w-12 h-[1px] bg-primary"></span>
+          <span className="w-12 h-px bg-primary"></span>
         </div>
         
         <motion.h1
@@ -35,7 +35,7 @@ const Hero = () => {
           className="text-6xl md:text-9xl font-headline font-bold uppercase tracking-tighter mb-6"
         >
           ARCHIT{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-secondary">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-primary-container to-secondary">
             NIRANJAN
           </span>
         </motion.h1>
@@ -46,7 +46,7 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
           className="text-xl md:text-2xl font-headline tracking-tight text-on-surface-variant mb-8 max-w-3xl mx-auto"
         >
-          Full Stack Developer | Problem Solver | Building Scalable Systems
+          Competitive Coder | Problem Solver | Building Scalable Systems
         </motion.p>
         
         <p className="text-base md:text-lg text-on-surface-variant/80 leading-relaxed max-w-2xl mx-auto mb-12">
@@ -55,7 +55,7 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-          <button className="px-10 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold uppercase tracking-widest rounded-xl neon-glow hover:scale-105 transition-all duration-300">
+          <button className="px-14 py-4  bg-linear-to-r from-primary to-primary-container text-on-primary font-headline font-bold uppercase tracking-widest rounded-xl neon-glow hover:scale-105 transition-all duration-300">
             View Projects
           </button>
 
@@ -66,10 +66,10 @@ const Hero = () => {
       </div>
       
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
-        <span className="text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/50">
+        <span className="text-[13px] tracking-[0.4em] uppercase text-on-surface-variant/100">
           SCROLL_FOR_INTAKE
         </span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-primary/50 to-transparent"></div>
+        <div className="w-px h-22 bg-linear-to-b from-primary/100 to-transparent"></div>
       </div>
     </section>
   );
