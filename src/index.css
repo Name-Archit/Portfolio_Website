@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
 html, body, #root {
   height: 100%;
   margin: 0;
@@ -8,6 +12,14 @@ html, body, #root {
 
 html {
   scroll-behavior: smooth;
+}
+
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Space Grotesk", sans-serif;
 }
 
 @theme {

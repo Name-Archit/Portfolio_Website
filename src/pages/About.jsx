@@ -28,13 +28,35 @@ const About = () => {
         </div>
 
         <div className="lg:col-span-5 relative">
+          {/* Glow background */}
           <div className="absolute -inset-4 bg-linear-to-br from-primary/20 to-secondary/10 blur-3xl opacity-30 rounded-full"></div>
 
+          {/* Card */}
           <div className="relative glass-panel rounded-3xl overflow-hidden border border-white/10 group">
             <img
-              src="./images/Hacker.png"
+              src="/images/Hacker.png"
               className="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition duration-700"
             />
+
+            {/* 👇 OVERLAY CONTENT */}
+            <div className="absolute bottom-0 left-0 w-full p-6 bg-linear-to-t from-black/80 via-black/20 to-transparent">
+              <div className="flex items-end justify-between">
+                {/* LEFT TEXT */}
+                <div>
+                  <p className="text-[10px] tracking-widest uppercase text-primary mb-1">
+                    CURRENT_STATUS
+                  </p>
+                  <h4 className="text-sm font-bold uppercase text-on-surface">
+                    READY_FOR_DEPLOYMENT
+                  </h4>
+                </div>
+
+                {/* RIGHT ICON */}
+                <span className="material-symbols-outlined fill text-secondary text-4xl drop-shadow-[0_0_8px_rgba(237,177,255,0.6)]">
+                  verified
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -52,7 +74,6 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
           <div className="relative group rounded-3xl border border-white/5 p-8 bg-linear-to-b from-white/5 to-transparent hover:border-primary/40 transition-all duration-500">
             <div
               className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none"
@@ -92,7 +113,7 @@ const About = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="relative group rounded-3xl border border-white/5 p-8 bg-linear-to-b from-white/5 to-transparent hover:border-secondary/40 transition-all duration-500">
             <div
               className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none"
@@ -131,7 +152,7 @@ const About = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="relative group rounded-3xl border border-white/5 p-8 bg-linear-to-b from-white/5 to-transparent hover:border-primary/40 transition-all duration-500">
             <div
               className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none"
@@ -160,7 +181,7 @@ const About = () => {
                 ),
               )}
             </div>
-            
+
             <div className="mt-6 border-t border-white/10 pt-4">
               <p className="text-xs text-on-surface-variant flex items-center gap-2">
                 <span className="material-symbols-outlined text-sm">info</span>

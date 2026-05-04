@@ -3,12 +3,12 @@ const Projects = () => {
     <section className="max-w-7xl mx-auto px-6 py-32">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         
-        <div className="md:col-span-8 group relative overflow-hidden rounded-full bg-surface-container-low border border-white/5">
+        <div className="md:col-span-8 group relative overflow-hidden rounded-full bg-surface-container-low border border-white/5 transition-all duration-500 hover:border-primary/30">
 
           <div className="aspect-video overflow-hidden">
             <img
               src="./images/unnamed.png"
-              className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition duration-700"
+              className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700"
             />
           </div>
 
