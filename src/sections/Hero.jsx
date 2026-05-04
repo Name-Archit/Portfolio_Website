@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section className="relative min-h-198.75 flex flex-col items-center justify-center pt-20 pb-32 overflow-hidden bg-background text-on-surface font-body">
-
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-secondary-container/10 rounded-full blur-[120px]" />
@@ -17,9 +16,8 @@ const Hero = () => {
           }}
         />
       </div>
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-        
         <div className="mb-8 inline-flex items-center gap-3">
           <span className="w-12 h-px bg-primary"></span>
           <span className="text-xs tracking-[0.4em] uppercase text-on-surface-variant">
@@ -27,7 +25,7 @@ const Hero = () => {
           </span>
           <span className="w-12 h-px bg-primary"></span>
         </div>
-        
+
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,7 +37,7 @@ const Hero = () => {
             NIRANJAN
           </span>
         </motion.h1>
-        
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -48,23 +46,23 @@ const Hero = () => {
         >
           Competitive Coder | Problem Solver | Building Scalable Systems
         </motion.p>
-        
+
         <p className="text-base md:text-lg text-on-surface-variant/80 leading-relaxed max-w-2xl mx-auto mb-12">
           I specialize in building high-performance systems and intuitive user
           experiences with technical depth and a strong sense of design.
         </p>
-        
+
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-          <button className="px-14 py-4  bg-linear-to-r from-primary to-primary-container text-on-primary font-headline font-bold uppercase tracking-widest rounded-xl neon-glow hover:scale-105 transition-all duration-300">
-            View Projects
+          <button className="px-14 py-4 bg-linear-to-r from-primary-container/100 to-primary/90 text-black font-headline hover:cursor-pointer font-bold uppercase tracking-widest rounded-xl shadow-[0_0_60px_rgba(0,210,255,0.25)] hover:shadow-[0_0_70px_rgba(0,200,255,0.8)] hover:scale-105 transition-all duration-300">
+            WHO AM I?
           </button>
 
-          <button className="px-10 py-4 glass-panel border border-primary/20 text-primary font-headline font-bold uppercase tracking-widest rounded-xl hover:bg-primary/10 transition-all duration-300">
+          <button className="px-10 py-4 glass-panel border border-primary/20 text-primary font-headline font-bold uppercase tracking-widest rounded-xl hover:bg-primary/20 hover:shadow-[0_0_70px_rgba(0,210,255,0.8)] hover:scale-105 transition-all duration-300 cursor-pointer">
             Contact Me
           </button>
         </div>
       </div>
-      
+
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
         <span className="text-[13px] tracking-[0.4em] uppercase text-on-surface-variant/100">
           SCROLL_FOR_INTAKE

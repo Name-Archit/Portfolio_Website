@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom";
+import ProjectsMain from "../pages/ProjectsMain";
+
 const Projects = () => {
   return (
     <section className="max-w-7xl mx-auto px-6 py-32">
@@ -19,7 +22,7 @@ const Projects = () => {
             <h3 className="text-3xl font-headline font-bold text-on-surface mb-4">
               NEURAL_GRID_OS
             </h3>
-            <p className="text-on-surface-variant text-sm max-w-md">
+            <p className="text-on-surface-variant text-sm max-w-md">  
               A distributed computing platform designed for low-latency synchronization across edge nodes.
             </p>
           </div>
@@ -78,7 +81,18 @@ const Projects = () => {
             </p>
           </div>
         </div>
+      <div className="mt-24 flex justify-between items-center border-t border-white/5 pt-12">
+        <div className="flex gap-4">
+          <span className="w-2 h-2 rounded-full bg-primary"></span>
+          <span className="w-2 h-2 rounded-full bg-white/10"></span>
+          <span className="w-2 h-2 rounded-full bg-white/10"></span>
+       </div>
 
+        <NavLink to = "/projects" className="font-headline text-lg font-bold tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors flex items-center gap-4 group">
+          VIEW_ALL_REPOSITORIES
+          <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+        </NavLink>
+      </div>
       </div>
     </section>
   );

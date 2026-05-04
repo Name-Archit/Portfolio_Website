@@ -1,17 +1,30 @@
+import { motion } from "framer-motion";
+
 const About = () => {
   return (
     <section id="about" className="max-w-7xl mx-auto px-8 py-24 space-y-32">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 space-y-8">
           <div>
-            <span className="text-[10px] tracking-[0.4em] text-primary uppercase">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="text-[10px] tracking-[0.4em] text-primary uppercase"
+            >
               SYSTEM_IDENTIFICATION // 01
-            </span>
+            </motion.p>
 
-            <h1 className="text-5xl md:text-7xl font-bold uppercase leading-none">
-              ENGINEERING <br />
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-7xl font-bold uppercase leading-none"
+            >
+              ENGINEERING{" "}
               <span className="text-primary-container">DIGITAL DEPTH</span>
-            </h1>
+            </motion.h1>
           </div>
 
           <div className="max-w-xl space-y-6">
