@@ -24,7 +24,7 @@ const Navbar = () => {
          }`
         }
         >
-          HOME
+          index.html
         </NavLink>        
 
         <NavLink
@@ -37,7 +37,7 @@ const Navbar = () => {
          }`
         }
         >
-          ABOUT
+          README.md
         </NavLink>
 
         <NavLink
@@ -50,7 +50,7 @@ const Navbar = () => {
          }`
         }
         >
-          PROJECTS
+          deployed_builds 
         </NavLink>
 
         <NavLink
@@ -63,7 +63,7 @@ const Navbar = () => {
          }`
         }
         >
-          EXPERTISE
+          capabilities.json
         </NavLink>
       </nav>
       

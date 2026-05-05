@@ -22,8 +22,8 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl font-bold uppercase leading-none"
             >
-              ENGINEERING{" "}
-              <span className="text-primary-container">DIGITAL DEPTH</span>
+              I THINK IN SYSTEM{" "}
+              <span className="text-primary-container">SPEAK IN CODE</span>
             </motion.h1>
           </div>
 

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -44,7 +45,7 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
           className="text-xl md:text-2xl font-headline tracking-tight text-on-surface-variant mb-8 max-w-3xl mx-auto"
         >
-          Competitive Coder | Problem Solver | Building Scalable Systems
+          while(alive != false) {"{"} Solve( ); Code( ); Build( ); {"}"}
         </motion.p>
 
         <p className="text-base md:text-lg text-on-surface-variant/80 leading-relaxed max-w-2xl mx-auto mb-12">
@@ -53,12 +54,14 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-          <button className="px-14 py-4 bg-linear-to-r from-primary-container/100 to-primary/90 text-black font-headline hover:cursor-pointer font-bold uppercase tracking-widest rounded-xl shadow-[0_0_60px_rgba(0,210,255,0.25)] hover:shadow-[0_0_70px_rgba(0,200,255,0.8)] hover:scale-105 transition-all duration-300">
-            WHO AM I?
-          </button>
+          <NavLink to="/about">
+            <button className="px-14 py-4 bg-linear-to-r from-primary-container/100 to-primary/90 text-black font-headline hover:cursor-pointer font-bold uppercase tracking-widest rounded-xl shadow-[0_0_60px_rgba(0,210,255,0.25)] hover:shadow-[0_0_70px_rgba(0,200,255,0.8)] hover:scale-105 transition-all duration-300">
+              README.md
+            </button>
+          </NavLink>
 
           <button className="px-10 py-4 glass-panel border border-primary/20 text-primary font-headline font-bold uppercase tracking-widest rounded-xl hover:bg-primary/20 hover:shadow-[0_0_70px_rgba(0,210,255,0.8)] hover:scale-105 transition-all duration-300 cursor-pointer">
-            Contact Me
+            Initialize_Contact
           </button>
         </div>
       </div>

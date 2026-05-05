@@ -24,6 +24,7 @@ const Footer = () => {
         <div className="flex gap-6">
 
           <a
+          
             href="https://github.com/Name-Archit"
             target="_blank"
             rel="noopener noreferrer"
