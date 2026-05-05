@@ -8,8 +8,8 @@ const Navbar = () => {
         <span className="material-symbols-outlined text-cyan-400">
             <a href="/">terminal</a>
         </span>
-        <span className="text-lg font-bold tracking-[0.3em] text-cyan-400 font-headline uppercase">
-          <a href="/">ARCHIT</a>
+        <span className="text-md font-bold tracking-[0.3em] text-cyan-400 font-headline">
+          <a href="/">ARCHIT.exe</a>
         </span>
       </div>
       
@@ -19,7 +19,7 @@ const Navbar = () => {
           className={({ isActive }) =>
          `uppercase text-sm relative ${
           isActive
-          ? "text-fuchsia-300 after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-fuchsia-400 after:rounded-full"
+          ? "text-fuchsia-300  font-bold after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-fuchsia-400 after:rounded-full"
           : "text-neutral-400 hover:text-cyan-400 transition"
          }`
         }
@@ -32,7 +32,7 @@ const Navbar = () => {
           className={({ isActive }) =>
          `uppercase text-sm relative ${
           isActive
-          ? "text-fuchsia-300 after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-fuchsia-400 after:rounded-full"
+          ? "text-fuchsia-300  font-bold after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-fuchsia-400 after:rounded-full"
           : "text-neutral-400 hover:text-cyan-400 transition"
          }`
         }
@@ -45,7 +45,7 @@ const Navbar = () => {
           className={({ isActive }) =>
          `uppercase text-sm relative ${
           isActive
-          ? "text-fuchsia-300 after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-fuchsia-400 after:rounded-full"
+          ? "text-fuchsia-300  font-bold after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-fuchsia-400 after:rounded-full"
           : "text-neutral-400 hover:text-cyan-400 transition"
          }`
         }
@@ -58,7 +58,7 @@ const Navbar = () => {
           className={({ isActive }) =>
          `uppercase text-sm relative ${
           isActive
-          ? "text-fuchsia-300 after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-fuchsia-400 after:rounded-full"
+          ? "text-fuchsia-300  font-bold  after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-fuchsia-400 after:rounded-full"
           : "text-neutral-400 hover:text-cyan-400 transition"
          }`
         }
@@ -67,7 +67,7 @@ const Navbar = () => {
         </NavLink>
       </nav>
       
-      <button className="bg-primary-container/10 border border-primary-container/20 px-5 py-2 rounded-xl text-cyan-400 uppercase text-xs font-bold hover:bg-primary-container/20 transition">
+      <button className="bg-primary-container/10 border hover:cursor-pointer border-primary-container/20 px-5 py-2 rounded-xl text-cyan-400 uppercase text-xs font-bold hover:bg-primary-container/20 transition">
         INITIALIZE_CONTACT
       </button>
     </header>

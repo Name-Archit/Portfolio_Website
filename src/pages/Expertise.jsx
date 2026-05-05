@@ -58,7 +58,7 @@ const Expertise = () => {
                   <span className="text-[10px] text-on-surface-variant">
                     PROBLEMS_SOLVED
                   </span>
-                  <p className="text-5xl font-bold">240+</p>
+                  <p className="text-5xl font-bold">250+</p>
                 </div>
 
                 <div className="ml-auto">
@@ -114,12 +114,12 @@ const Expertise = () => {
           </div>
         </div>
       </section>{" "}
-      {/* ✅ FIRST GRID CLOSED PROPERLY */}
+            
       {/* ================= SECOND GRID ================= */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-32 items-start">
         {/* ===== LEFT (GATE) ===== */}
         <div className="md:col-span-4 bg-surface-container-low rounded-3xl p-10 border border-white/5">
-          <h3 className="text-3xl font-bold">GATE_CS_SCORE_384</h3>
+          <h3 className="text-3xl font-bold">At_Coder_7_Kyu</h3>
 
           <p className="text-sm mt-4 text-on-surface-variant leading-relaxed">
             Specialized in algorithms, data structures, and system design with

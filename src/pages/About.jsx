@@ -47,7 +47,7 @@ const About = () => {
           {/* Card */}
           <div className="relative glass-panel rounded-3xl overflow-hidden border border-white/10 group">
             <img
-              src="/images/Hacker.png"
+              src="/images/MyProfessional.png"
               className="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition duration-700"
             />
 
@@ -56,10 +56,10 @@ const About = () => {
               <div className="flex items-end justify-between">
                 {/* LEFT TEXT */}
                 <div>
-                  <p className="text-[10px] tracking-widest uppercase text-primary mb-1">
+                  <p className="text-[12px] tracking-widest uppercase text-primary mb-1">
                     CURRENT_STATUS
                   </p>
-                  <h4 className="text-sm font-bold uppercase text-on-surface">
+                  <h4 className="text-md font-bold uppercase text-on-surface">
                     READY_FOR_DEPLOYMENT
                   </h4>
                 </div>

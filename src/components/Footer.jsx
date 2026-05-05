@@ -11,8 +11,8 @@ const Footer = () => {
             <span className="material-symbols-outlined text-cyan-400">
                     <a href="/">terminal</a>
             </span>
-            <span className="text-lg font-bold tracking-[0.3em] text-cyan-400 font-headline uppercase">                
-              <a href="/">ARCHIT</a>
+            <span className="text-md font-bold tracking-[0.3em] text-cyan-400 font-headline">                
+              <a href="/">ARCHIT.exe</a>
             </span>
           </div>
 
@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="flex gap-6">
 
           <a
-          
+
             href="https://github.com/Name-Archit"
             target="_blank"
             rel="noopener noreferrer"

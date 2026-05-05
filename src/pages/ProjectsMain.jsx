@@ -32,12 +32,12 @@ const ProjectsMain = () => {
       {/* GRID */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
         {/* PROJECT 1 */}
-        <div className="md:col-span-8 group relative overflow-hidden rounded-3xl bg-surface-container-low border border-white/10 hover:border-primary/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(0,210,255,0.1)]">
+        <div className="md:col-span-8 group relative overflow-hidden rounded-3xl bg-surface-container-low border border-white/10 hover:border-primary/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(0,210,255,0.4)]">
           <div className="flex flex-col md:flex-row h-full">
             {/* IMAGE */}
             <div className="md:w-1/2 relative min-h-75">
               <img
-                src="/images/Project01.png"
+                src="/images/skyline.png"
                 className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
               />
             </div>
@@ -45,28 +45,37 @@ const ProjectsMain = () => {
             {/* CONTENT */}
             <div className="md:w-1/2 p-10 flex flex-col justify-between">
               <div>
-                <span className="text-[10px] text-secondary tracking-widest">
+                <span className="text-[12px] text-secondary tracking-widest">
                   01 // QUANTUM_CORE
                 </span>
 
-                <h2 className="font-headline text-3xl font-bold uppercase mt-4 mb-4">
-                  NEON ZENITH
+                <h2 className="font-headline text-3xl uppercase mt-4 mb-4">
+                  Paper_Trade.exe
                 </h2>
 
                 <p className="text-on-surface-variant text-sm mb-6">
-                  A distributed ledger system designed for micro-second latency
-                  execution environments.
+                  Where curiosity meets capital markets. A platform that empowers students to practice investing through real market data, in a completely risk-free environment. 
+                  Designed for clarity, built for confidence — helping the next generation of investors make informed decisions before their first real trade.
                 </p>
 
                 <div className="flex gap-2 mb-6 flex-wrap">
                   <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
-                    React
+                    REACT
                   </span>
                   <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
-                    Go
+                    HTML
                   </span>
                   <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
-                    Redis
+                    PYTHON
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    TAILWIND.CSS
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    DATABASE
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    yfinance API
                   </span>
                 </div>
               </div>
@@ -85,7 +94,7 @@ const ProjectsMain = () => {
         </div>
 
         {/* PROJECT 2 */}
-        <div className="md:col-span-4 group p-8 rounded-3xl border border-white/10 hover:border-secondary/30 transition duration-500">
+        <div className="md:col-span-4 group p-8 rounded-3xl border border-white/10 hover:border-secondary/30 hover:shadow-[0_0_50px_rgba(0,210,255,0.4)] transition duration-500">
           <div className="mb-6 aspect-square overflow-hidden rounded-xl">
             <img
               src="/images/Project02.png"
@@ -106,7 +115,7 @@ const ProjectsMain = () => {
         </div>
 
         {/* PROJECT 3 */}
-        <div className="md:col-span-12 group relative overflow-hidden rounded-3xl bg-surface-container-low border border-white/10 transition-all duration-500 hover:border-white/30 hover:shadow-[0_0_50px_rgba(223,220,219,0.05)]">
+        <div className="md:col-span-12 group relative overflow-hidden rounded-3xl bg-surface-container-low border border-white/10 transition-all duration-500 hover:border-white/30 hover:shadow-[0_0_50px_rgba(223,220,219,0.4)]">
           <div className="flex flex-col md:flex-row p-10 gap-12 items-center">
             {/* LEFT CONTENT */}
             <div className="md:w-1/3">
