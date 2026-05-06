@@ -45,7 +45,7 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
           className="text-xl md:text-2xl font-headline tracking-tight text-on-surface-variant mb-8 max-w-3xl mx-auto"
         >
-          while(alive != false) {"{"} Solve( ); Code( ); Build( ); {"}"}
+          while(alive) {"{"} Solve( ); Code( ); Build( ); {"}"}
         </motion.p>
 
         <p className="text-base md:text-lg text-on-surface-variant/80 leading-relaxed max-w-2xl mx-auto mb-12">
@@ -59,10 +59,12 @@ const Hero = () => {
               README.md
             </button>
           </NavLink>
-
+          
+          <NavLink to="/contact">
           <button className="px-10 py-4 glass-panel border border-primary/20 text-primary font-headline font-bold uppercase tracking-widest rounded-xl hover:bg-primary/20 hover:shadow-[0_0_70px_rgba(0,210,255,0.8)] hover:scale-105 transition-all duration-300 cursor-pointer">
             Initialize_Contact
           </button>
+          </NavLink>
         </div>
       </div>
 

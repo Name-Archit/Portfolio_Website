@@ -67,9 +67,11 @@ const Navbar = () => {
         </NavLink>
       </nav>
       
+      <NavLink to = "/contact">
       <button className="bg-primary-container/10 border hover:cursor-pointer border-primary-container/20 px-5 py-2 rounded-xl text-cyan-400 uppercase text-xs font-bold hover:bg-primary-container/20 transition">
         INITIALIZE_CONTACT
       </button>
+      </NavLink>
     </header>
   );
 };
