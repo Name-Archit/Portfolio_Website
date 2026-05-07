@@ -27,7 +27,7 @@ export default function Chat() {
         try {
 
             const response = await fetch(
-                "http://127.0.0.1:8000/chat",
+                "https://portfolio-website-1-swpq.onrender.com/chat",
                 {
                     method: "POST",
                     headers: {
@@ -69,7 +69,7 @@ export default function Chat() {
 
     return (
 
-        <section className="relative py-32 px-6 overflow-hidden">
+        <section className="relative pt-0 pb-20 px-6 overflow-hidden -mt-20">
 
             {/* Background Glow */}
             <div className="absolute inset-0 -z-10">
@@ -97,9 +97,9 @@ export default function Chat() {
 
                     <h2 className="text-5xl md:text-7xl font-headline uppercase tracking-tight">
 
-                        Ask{" "}
+                        Ask_
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
-                            Anything
+                            Anything_About_Me
                         </span>
 
                     </h2>
@@ -129,7 +129,7 @@ export default function Chat() {
                     </div>
 
                     {/* Messages */}
-                    <div className="h-150 overflow-y-auto p-8 space-y-8">
+                    <div className="h-100 overflow-y-auto p-8 space-y-8">
 
                         {messages.length === 0 && (
 
