@@ -7,6 +7,37 @@ from groq import Groq
 from pypdf import PdfReader
 
 import os
+import re
+
+import re
+
+def clean_response(text):
+
+    # Remove markdown bold
+    text = text.replace("**", "")
+
+    # Remove markdown italics/code
+    text = re.sub(r'[*`_~]', '', text)
+
+    # Remove markdown headers
+    text = re.sub(r'#{1,6}\s*', '', text)
+
+    # Remove markdown tables
+    text = re.sub(r'\|.*\|', '', text)
+
+    # Remove repeated separators
+    text = re.sub(r'[-=]{3,}', '', text)
+
+    # Remove strange unicode
+    text = re.sub(r'[^\x00-\x7F]+', ' ', text)
+
+    # Clean excessive spaces
+    text = re.sub(r'\s+', ' ', text)
+
+    # Better paragraph spacing
+    text = text.replace('. ', '.\n\n')
+
+    return text.strip()
 
 
 # =========================
@@ -90,6 +121,19 @@ summary = load_summary("Me/Summary.txt")
 name = "Archit Niranjan"
 
 system_prompt = f"""
+
+IMPORTANT FORMATTING RULES:
+
+- Never use markdown formatting
+- Never use bold syntax like **
+- Never use italic syntax
+- Never use headings
+- Never use tables
+- Never use code blocks
+- Never use markdown symbols
+- Output plain clean text only
+- Responses should look natural inside a modern chat UI
+
 You are acting as {name}.
 
 You are answering questions on {name}'s website, particularly questions related to:
@@ -113,7 +157,23 @@ Speak as if talking to:
 - collaborators
 - future employers
 
-If you don't know something, say so honestly.
+If you do not know the answer:
+
+- Never stay silent
+- Never return empty responses
+- Politely explain that you currently do not have information about that topic
+- Suggest asking Archit directly for more details
+- Say that the information may be added to the AI system later
+
+If a question is unclear or contains typos:
+
+- Politely ask the user to rephrase the question
+- Never pretend to understand something unclear
+
+If the server or system encounters an issue:
+
+- Respond gracefully and professionally
+- Never expose technical errors to the user
 
 =========================
 SUMMARY
@@ -168,13 +228,17 @@ def chat(message, history=[]):
 
     try:
         response = client.chat.completions.create(
-            model="openai/gpt-oss-20b",
+            model="llama-3.3-70b-versatile",
             messages=messages,
-            temperature=0.7,
-            max_tokens=1024
+            temperature=0.3,
+            max_tokens=35
         )
 
-        return response.choices[0].message.content
+        raw_text = response.choices[0].message.content
+
+        cleaned = clean_response(raw_text)
+
+        return cleaned
 
     except Exception as e:
         return f"Error: {str(e)}"

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Chat() {
@@ -6,6 +6,8 @@ export default function Chat() {
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(false);
+    const messagesEndRef = useRef(null);
+    const chatContainerRef = useRef(null);
 
     async function sendMessage() {
 
@@ -53,6 +55,14 @@ export default function Chat() {
 
             console.error(error);
 
+setMessages((prev) => [
+    ...prev,
+    {
+        role: "assistant",
+        text: "I might be busy right now. Please try again in a few seconds."
+    }
+]);
+
         } finally {
 
             setLoading(false);
@@ -66,6 +76,17 @@ export default function Chat() {
             sendMessage();
         }
     }
+
+    useEffect(() => {
+
+    if (chatContainerRef.current) {
+
+        chatContainerRef.current.scrollTop =
+            chatContainerRef.current.scrollHeight;
+
+    }
+
+}, [messages, loading]);
 
     return (
 
@@ -129,7 +150,10 @@ export default function Chat() {
                     </div>
 
                     {/* Messages */}
-                    <div className="h-100 overflow-y-auto p-8 space-y-8">
+                    <div
+    ref={chatContainerRef}
+    className="h-100 overflow-y-auto p-8 space-y-8"
+>
 
                         {messages.length === 0 && (
 
@@ -165,7 +189,7 @@ export default function Chat() {
                             >
 
                                 <div
-                                    className={`max-w-[75%] px-6 py-5 rounded-2xl border leading-relaxed whitespace-pre-wrap ${
+                                    className={`max-w-[75%] px-6 py-5 rounded-2xl border leading-8 tracking-wide whitespace-pre-line wrap-break-word text-[15px] ${
                                         msg.role === "user"
                                             ? "bg-primary text-black border-primary shadow-[0_0_30px_rgba(0,210,255,0.25)]"
                                             : "glass-panel border-primary/10 text-on-surface"
@@ -184,9 +208,9 @@ export default function Chat() {
                                 Thinking...
                             </div>
 
-                        )}
+                        )}                        
 
-                    </div>
+                    </div>                    
 
                     {/* Input */}
                     <div className="border-t border-primary/10 p-6 flex gap-4">
