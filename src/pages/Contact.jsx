@@ -3,9 +3,9 @@ const Contact = () => {
     <main className="relative pt-32 pb-48 px-6 lg:px-0 overflow-hidden">
 
       {/* ===== Ambient Glow ===== */}
-      <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-primary-container/5 blur-[120px] rounded-full"></div>
+      <div className="absolute top-0 right-0 -z-10 w-150 h-150 bg-primary-container/5 blur-[120px] rounded-full"></div>
 
-      <div className="absolute bottom-0 left-0 -z-10 w-[600px] h-[600px] bg-secondary-container/5 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-0 left-0 -z-10 w-150 h-150 bg-secondary-container/5 blur-[120px] rounded-full"></div>
 
       <section className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
@@ -21,9 +21,9 @@ const Contact = () => {
 
             <h1 className="text-5xl md:text-7xl font-headline font-bold uppercase tracking-tighter leading-tight">
 
-              LET'S BUILD <br />
+              LET'S BUILD <br /> & CODE <br />
 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
                 THE FUTURE
               </span>
 
@@ -42,7 +42,7 @@ const Contact = () => {
 
             {/* LINKEDIN */}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/archit-niranjan-0ba699238/3"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between p-6 rounded-xl bg-surface-container-low border border-white/10 hover:bg-surface-container-high transition-all duration-500"
@@ -74,7 +74,7 @@ const Contact = () => {
 
             {/* GITHUB */}
             <a
-              href="https://github.com"
+              href="https://github.com/Name-Archit"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between p-6 rounded-xl bg-surface-container-low border border-white/10 hover:bg-surface-container-high transition-all duration-500"
@@ -106,7 +106,7 @@ const Contact = () => {
 
             {/* EMAIL */}
             <a
-              href="mailto:yourmail@gmail.com"
+              href="mailto:architniranjan4455@gmail.com"
               className="group flex items-center justify-between p-6 rounded-xl bg-surface-container-low border border-white/10 hover:bg-surface-container-high transition-all duration-500"
             >
 
@@ -140,10 +140,10 @@ const Contact = () => {
         {/* ================= RIGHT SIDE ================= */}
         <div className="lg:col-span-7">
 
-          <div className="glass-panel p-8 md:p-12 rounded-[2rem] border border-white/5 shadow-2xl relative overflow-hidden">
+          <div className="glass-panel p-8 md:p-12 rounded-4xl border border-white/5 shadow-2xl relative overflow-hidden">
 
             {/* Grid Background */}
-            <div className="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] [background-size:20px_20px] -z-10"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-size-[20px_20px] -z-10"></div>
 
             <form className="space-y-8">
 
@@ -159,7 +159,7 @@ const Contact = () => {
 
                   <input
                     type="text"
-                    placeholder="ARCHITECT_NAME"
+                    placeholder="YOUR_NAME"
                     className="w-full bg-surface-container-highest/30 border border-white/10 focus:border-primary/50 rounded-xl px-4 py-4 text-on-surface placeholder:text-on-surface-variant/30 transition-all outline-none"
                   />
 
@@ -200,7 +200,7 @@ const Contact = () => {
               {/* BUTTON */}
               <button
                 type="submit"
-                className="w-full py-5 bg-gradient-to-r from-primary/80 to-primary-container/80 text-black rounded-xl font-headline font-bold text-sm tracking-[0.2em] uppercase hover:shadow-[0_0_30px_rgba(0,210,255,0.3)] hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-3"
+                className="w-full py-5 bg-linear-to-r from-primary/80 to-primary-container/80 text-black rounded-xl font-headline font-bold text-sm tracking-[0.2em] uppercase hover:shadow-[0_0_30px_rgba(0,210,255,0.3)] hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-3"
               >
 
                 EXECUTE_TRANSMISSION

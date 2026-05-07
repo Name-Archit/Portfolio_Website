@@ -55,24 +55,17 @@ const Hero = () => {
 
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
           <NavLink to="/about">
-            <button className="px-14 py-4 bg-linear-to-r from-primary-container/100 to-primary/90 text-black font-headline hover:cursor-pointer font-bold uppercase tracking-widest rounded-xl shadow-[0_0_60px_rgba(0,210,255,0.25)] hover:shadow-[0_0_70px_rgba(0,200,255,0.8)] hover:scale-105 transition-all duration-300">
+            <button className="px-18 py-4 bg-linear-to-r from-primary-container/100 to-primary/90 text-black font-headline hover:cursor-pointer font-bold uppercase tracking-widest rounded-xl shadow-[0_0_60px_rgba(0,210,255,0.25)] hover:shadow-[0_0_70px_rgba(0,200,255,0.8)] hover:scale-105 transition-all duration-300">
               README.md
             </button>
           </NavLink>
           
           <NavLink to="/contact">
-          <button className="px-10 py-4 glass-panel border border-primary/20 text-primary font-headline font-bold uppercase tracking-widest rounded-xl hover:bg-primary/20 hover:shadow-[0_0_70px_rgba(0,210,255,0.8)] hover:scale-105 transition-all duration-300 cursor-pointer">
+          <button className="px-5 py-4 glass-panel border border-primary/20 text-primary font-headline font-bold uppercase tracking-widest rounded-xl hover:bg-primary/20 hover:shadow-[0_0_70px_rgba(0,210,255,0.8)] hover:scale-105 transition-all duration-300 cursor-pointer">
             Initialize_Contact
           </button>
           </NavLink>
         </div>
-      </div>
-
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
-        <span className="text-[13px] tracking-[0.4em] uppercase text-on-surface-variant/100">
-          SCROLL_FOR_INTAKE
-        </span>
-        <div className="w-px h-22 bg-linear-to-b from-primary/100 to-transparent"></div>
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import Hero from "../sections/Hero";
-import Projects from "../sections/Projects";
+import Chat from "../components/Chat";
 
 // https://architportfolio-one.vercel.app/
 
@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Projects />
+      <Chat />
     </>
   );
 };
