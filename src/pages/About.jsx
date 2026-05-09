@@ -47,7 +47,7 @@ const About = () => {
           {/* Card */}
           <div className="relative glass-panel rounded-3xl overflow-hidden border border-white/10 group">
             <img
-              src="/images/MyProfessional.png"
+              src="/images/MyProfessional.webp"
               className="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition duration-700"
             />
 

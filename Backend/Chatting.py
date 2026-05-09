@@ -16,26 +16,28 @@ def clean_response(text):
     # Remove markdown bold
     text = text.replace("**", "")
 
-    # Remove markdown italics/code
-    text = re.sub(r'[*`_~]', '', text)
+    # Remove markdown italic/code chars
+    text = text.replace("*", "")
+    text = text.replace("`", "")
+    text = text.replace("_", "")
+
+    # Remove markdown bullets
+    text = text.replace("- ", "")
 
     # Remove markdown headers
-    text = re.sub(r'#{1,6}\s*', '', text)
+    text = re.sub(r'#{1,6}', '', text)
 
     # Remove markdown tables
-    text = re.sub(r'\|.*\|', '', text)
+    text = re.sub(r'\|', '', text)
 
-    # Remove repeated separators
-    text = re.sub(r'[-=]{3,}', '', text)
-
-    # Remove strange unicode
+    # Remove weird unicode
     text = re.sub(r'[^\x00-\x7F]+', ' ', text)
 
-    # Clean excessive spaces
+    # Remove repeated spaces
     text = re.sub(r'\s+', ' ', text)
 
-    # Better paragraph spacing
-    text = text.replace('. ', '.\n\n')
+    # Better paragraph formatting
+    text = text.replace(". ", ".\n\n")
 
     return text.strip()
 
@@ -175,6 +177,14 @@ If the server or system encounters an issue:
 - Respond gracefully and professionally
 - Never expose technical errors to the user
 
+Keep responses conversational.
+
+Do not format answers like documentation.
+
+Avoid lists unless absolutely necessary.
+
+Write responses like a modern premium AI assistant inside a chat application.
+
 =========================
 SUMMARY
 =========================
@@ -236,9 +246,9 @@ def chat(message, history=[]):
 
         raw_text = response.choices[0].message.content
 
-        cleaned = clean_response(raw_text)
+        cleaned_text = clean_response(raw_text)
 
-        return cleaned
+        return cleaned_text
 
     except Exception as e:
         return f"Error: {str(e)}"
@@ -252,6 +262,12 @@ def chat(message, history=[]):
 def home():
     return {
         "message": "AI Backend Running"
+    }
+
+@app.get("/health")
+def health():
+    return {
+        "status": "alive"
     }
 
 

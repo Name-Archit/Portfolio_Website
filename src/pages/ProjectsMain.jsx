@@ -37,7 +37,7 @@ const ProjectsMain = () => {
             {/* IMAGE */}
             <div className="md:w-1/2 relative min-h-75">
               <img
-                src="/images/skyline.png"
+                src="/images/skyline.webp"
                 className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
               />
             </div>
@@ -97,7 +97,7 @@ const ProjectsMain = () => {
         <div className="md:col-span-4 group p-8 rounded-3xl border border-white/10 hover:border-secondary/30 hover:shadow-[0_0_50px_rgba(0,210,255,0.4)] transition duration-500">
           <div className="mb-6 aspect-square overflow-hidden rounded-xl">
             <img
-              src="/images/Project02.png"
+              src="/images/Project02.webp"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition"
             />
           </div>

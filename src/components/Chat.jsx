@@ -6,6 +6,7 @@ export default function Chat() {
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [backendReady, setBackendReady] = useState(false);
     const messagesEndRef = useRef(null);
     const chatContainerRef = useRef(null);
 
@@ -87,6 +88,68 @@ setMessages((prev) => [
     }
 
 }, [messages, loading]);
+
+ useEffect(() => {
+
+    async function wakeBackend() {
+
+        try {
+
+            await fetch(
+                "https://portfolio-website-1-swpq.onrender.com/health"
+            );
+
+        } catch (error) {
+
+            console.log(error);
+
+        } finally {
+
+            // Small cinematic delay
+            setTimeout(() => {
+
+                setBackendReady(true);
+
+            }, 2500);
+
+        }
+    }
+
+    wakeBackend();
+
+}, []);
+
+if (!backendReady) {
+
+    return (
+
+        <section className="h-screen flex items-center justify-center bg-background overflow-hidden">
+
+            <div className="text-center">
+
+                {/* Spinning Ring */}
+                <div className="w-24 h-24 rounded-full border-2 border-primary/20 border-t-primary animate-spin mx-auto mb-10" />
+
+                {/* Heading */}
+                <h2 className="text-4xl md:text-6xl font-headline uppercase tracking-[0.3em] text-primary mb-6">
+
+                    INITIALIZING_AI
+
+                </h2>
+
+                {/* Subtitle */}
+                <p className="text-on-surface-variant tracking-widest uppercase text-sm">
+
+                    Waking Neural Systems...
+
+                </p>
+
+            </div>
+
+        </section>
+
+    );
+}
 
     return (
 
