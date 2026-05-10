@@ -4,9 +4,9 @@ from pydantic import BaseModel
 
 from dotenv import load_dotenv
 from groq import Groq
-from pypdf import PdfReader
 
 import os
+
 
 # =========================
 # Load Environment Variables
@@ -20,6 +20,7 @@ if not api_key:
     raise ValueError("GROQ_API_KEY not found in .env file")
 
 client = Groq(api_key=api_key)
+
 
 # =========================
 # Create FastAPI App
@@ -42,43 +43,22 @@ app.add_middleware(
 
 
 # =========================
-# Load LinkedIn PDF
-# =========================
-
-def load_resume_pdf(pdf_path: str) -> str:
-    try:
-        reader = PdfReader(pdf_path)
-
-        text = ""
-
-        for page in reader.pages:
-            extracted = page.extract_text()
-
-            if extracted:
-                text += extracted + "\n"
-
-        return text.strip()
-
-    except Exception as e:
-        print(f"Error reading PDF: {e}")
-        return ""
-
-
-# =========================
 # Load Summary File
 # =========================
 
 def load_summary(summary_path: str) -> str:
+
     try:
+
         with open(summary_path, "r", encoding="utf-8") as file:
             return file.read().strip()
 
     except Exception as e:
+
         print(f"Error reading summary file: {e}")
         return ""
 
 
-resume = load_resume_pdf("Me/Resume.pdf")
 summary = load_summary("Me/Summary.txt")
 
 
@@ -89,66 +69,59 @@ summary = load_summary("Me/Summary.txt")
 name = "Archit Niranjan"
 
 system_prompt = f"""
-
 You are acting as {name}.
 
-You are answering questions on {name}'s website, particularly questions related to:
-- career
-- background
+You are answering questions on {name}'s personal portfolio website.
+
+Topics include:
+- projects
 - skills
 - experience
-- projects
+- career
+- technology
+- competitive programming
+- AI
+- finance
 
-Your responsibility is to represent {name} as faithfully as possible.
-
-Be:
+Your personality:
 - professional
+- modern
 - confident
-- engaging
-- concise when needed
+- concise
+- conversational
 
-Speak as if talking to:
-- recruiters
-- clients
-- collaborators
-- future employers
+Rules:
+- Keep responses natural and readable
+- Prefer short paragraphs
+- Avoid overly long answers
+- Avoid markdown tables
+- Do not over-format responses
+- Speak like a premium AI assistant
 
-If you do not know the answer:
+If you don't know something:
+- say so politely
+- suggest asking Archit directly
 
-- Never stay silent
-- Never return empty responses
-- Politely explain that you currently do not have information about that topic
-- Suggest asking Archit directly for more details
-- Say that the information may be added to the AI system later
-
-If a question is unclear or contains typos:
-
-- Politely ask the user to rephrase the question
-- Never pretend to understand something unclear
-
-If the server or system encounters an issue:
-
-- Respond gracefully and professionally
-- Never expose technical errors to the user
-
+If the user's question is unclear:
+- politely ask them to rephrase
 
 =========================
-SUMMARY
+PROFILE CONTEXT
 =========================
 
 {summary}
 
-=========================
-RESUME
-=========================
-
-{resume}
-
 Always stay in character as {name}.
 """
 
+
+# =========================
+# Request Model
+# =========================
+
 class ChatRequest(BaseModel):
     message: str
+    history: list = []
 
 
 # =========================
@@ -167,53 +140,63 @@ def chat(message, history=None):
         }
     ]
 
-    # Add conversation history
-    if history:
-        for msg in history:
+    # Only keep recent history
+    for msg in history[-4:]:
 
-            role = msg.get("role")
-            content = msg.get("content")
+        role = msg.get("role")
+        content = msg.get("content")
 
-            if role and content:
-                messages.append({
-                    "role": role,
-                    "content": content
-                })
+        if role and content:
 
-    # Add latest user message
+            messages.append({
+                "role": role,
+                "content": content
+            })
+
+    # Latest user message
     messages.append({
         "role": "user",
         "content": message
     })
 
     try:
+
         response = client.chat.completions.create(
-            model="openai/gpt-oss-120b",
+            model="llama-3.1-8b-instant",
             messages=messages,
-            temperature=0.5,
-            max_tokens=10000
+            temperature=0.4,
+            max_tokens=400
         )
 
         raw_text = response.choices[0].message.content
 
-        return raw_text
+        return raw_text.strip()
 
     except Exception as e:
-        return f"Error: {str(e)}"
-    
+
+        print("ERROR:", str(e))
+
+        return (
+            "I'm having trouble responding right now. "
+            "Please try again in a few seconds."
+        )
+
+
 # =========================
 # Routes
 # =========================
 
-
 @app.get("/")
 def home():
+
     return {
         "message": "AI Backend Running"
     }
 
+
 @app.get("/health")
 def health():
+
     return {
         "status": "alive"
     }
@@ -222,8 +205,11 @@ def health():
 @app.post("/chat")
 def chat_api(req: ChatRequest):
 
-    response = chat(req.message)
+    response = chat(
+        req.message,
+        req.history
+    )
 
     return {
         "response": response
-    }    
+    }

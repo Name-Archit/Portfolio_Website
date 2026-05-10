@@ -1,18 +1,8 @@
-Archit Niranjan is a Computer Science student and software developer with strong interests in competitive programming, backend systems, 
-AI integration, finance technology, and full-stack development.
+Archit Niranjan is a software developer and Computer Science graduate from IIIT Pune, India, with strong interests in competitive programming, backend systems, AI integration, finance technology, and full-stack development.
 
-His education is B.Tech Graduate in Computer Science and Engineering from Indian Institute of Information Technology Pune(Town), Maharashtra(State), India(Country).
+He actively practices data structures and algorithms on platforms like Codeforces, LeetCode, and CodeChef, solving problems involving graph theory, dynamic programming, binary search, and optimization.
 
-He has experience solving advanced algorithmic problems involving data structures, dynamic programming, graph theory, 
-binary search, and optimization techniques. He actively practices competitive programming on platforms such as Codeforces, LeetCode, and CodeChef.
-
-Archit is currently building a finance-focused platform that combines real-time market data, paper trading simulations, analytics dashboards, 
-and AI-powered interactions. The platform is designed with a premium institutional-style UI and aims to help users learn investing and trading concepts interactively.
-
-Other key things he is been working on are:
-
-- Learning new tools of AI
-- Learning how to scale
+Archit is currently building AI-powered web platforms focused on finance, trading simulation, and interactive user experiences. His projects combine scalable backend systems with visually polished frontend design and modern AI workflows.
 
 His technical stack includes:
 - C++
@@ -24,14 +14,18 @@ His technical stack includes:
 - Tailwind CSS
 - REST APIs
 
-He is particularly interested in:
-- quantitative finance
-- scalable backend systems
+He is currently learning:
+- Docker
+- system design
+- cloud/backend architecture
+- AI tooling and workflows
+- scalable systems
+
+His interests include:
 - AI-powered applications
-- market analytics
-- financial engineering
+- future technologies
+- backend engineering
+- finance technology
+- high-performance systems
 
-Archit enjoys building projects that combine strong engineering with visually polished user experiences. 
-He focuses on creating systems that are both technically sound and practically useful.
-
-He is continuously learning modern technologies including Docker, system design, AI workflows, and cloud/backend architecture.
+Archit prefers building products that feel modern, premium, fast, and technically robust while maintaining a strong focus on user experience.
