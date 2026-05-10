@@ -7,40 +7,6 @@ from groq import Groq
 from pypdf import PdfReader
 
 import os
-import re
-
-import re
-
-def clean_response(text):
-
-    # Remove markdown bold
-    text = text.replace("**", "")
-
-    # Remove markdown italic/code chars
-    text = text.replace("*", "")
-    text = text.replace("`", "")
-    text = text.replace("_", "")
-
-    # Remove markdown bullets
-    text = text.replace("- ", "")
-
-    # Remove markdown headers
-    text = re.sub(r'#{1,6}', '', text)
-
-    # Remove markdown tables
-    text = re.sub(r'\|', '', text)
-
-    # Remove weird unicode
-    text = re.sub(r'[^\x00-\x7F]+', ' ', text)
-
-    # Remove repeated spaces
-    text = re.sub(r'\s+', ' ', text)
-
-    # Better paragraph formatting
-    text = text.replace(". ", ".\n\n")
-
-    return text.strip()
-
 
 # =========================
 # Load Environment Variables
@@ -124,18 +90,6 @@ name = "Archit Niranjan"
 
 system_prompt = f"""
 
-IMPORTANT FORMATTING RULES:
-
-- Never use markdown formatting
-- Never use bold syntax like **
-- Never use italic syntax
-- Never use headings
-- Never use tables
-- Never use code blocks
-- Never use markdown symbols
-- Output plain clean text only
-- Responses should look natural inside a modern chat UI
-
 You are acting as {name}.
 
 You are answering questions on {name}'s website, particularly questions related to:
@@ -177,13 +131,6 @@ If the server or system encounters an issue:
 - Respond gracefully and professionally
 - Never expose technical errors to the user
 
-Keep responses conversational.
-
-Do not format answers like documentation.
-
-Avoid lists unless absolutely necessary.
-
-Write responses like a modern premium AI assistant inside a chat application.
 
 =========================
 SUMMARY
@@ -208,7 +155,10 @@ class ChatRequest(BaseModel):
 # Chat Function
 # =========================
 
-def chat(message, history=[]):
+def chat(message, history=None):
+
+    if history is None:
+        history = []
 
     messages = [
         {
@@ -238,17 +188,15 @@ def chat(message, history=[]):
 
     try:
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-120b",
             messages=messages,
-            temperature=0.3,
-            max_tokens=35
+            temperature=0.5,
+            max_tokens=10000
         )
 
         raw_text = response.choices[0].message.content
 
-        cleaned_text = clean_response(raw_text)
-
-        return cleaned_text
+        return raw_text
 
     except Exception as e:
         return f"Error: {str(e)}"
