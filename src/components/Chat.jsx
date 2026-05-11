@@ -228,7 +228,7 @@ if (!backendReady) {
                   }`}
                 >
                   <div
-                    className={`max-w-[70%] px-6 py-3 rounded-2xl border leading-8 tracking-wide whitespace-pre-line wrap-break-word text-[15px] ${
+                    className={`max-w-[75%] px-6 py-3 rounded-2xl border leading-8 tracking-wide whitespace-pre-line wrap-break-word text-[15px] ${
                       msg.role === "user"
                         ? "bg-primary text-black border-primary shadow-[0_0_30px_rgba(0,210,255,0.25)]"
                         : "glass-panel border-primary/10 text-on-surface"
