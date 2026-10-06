@@ -2,9 +2,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
-import { useState } from "react";
-import LoadingScreen from "./components/LoadingScreen";
-
 import Home from "./pages/Home";
 import About from "./pages/About";
 
@@ -14,15 +11,6 @@ import Expertise from "./pages/Expertise";
 import Contact from "./pages/Contact";
 
 function App() {
-  const [loadingComplete, setLoadingComplete] = useState(false);
-  if (!loadingComplete) {
-
-    return (
-        <LoadingScreen
-            onFinish={() => setLoadingComplete(true)}
-        />
-    );
-}
   return (
     <div className="bg-background text-on-surface">
 

@@ -1,11 +1,12 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from dotenv import load_dotenv
 from groq import Groq
 
 import os
+from datetime import datetime, timezone
 
 
 # =========================
@@ -124,6 +125,12 @@ class ChatRequest(BaseModel):
     history: list = []
 
 
+class ContactRequest(BaseModel):
+    name: str = Field(min_length=1, max_length=120)
+    email: str = Field(min_length=3, max_length=320)
+    message: str = Field(min_length=1, max_length=5000)
+
+
 # =========================
 # Chat Function
 # =========================
@@ -213,3 +220,38 @@ def chat_api(req: ChatRequest):
     return {
         "response": response
     }
+
+
+@app.post("/contact")
+def contact_api(req: ContactRequest):
+    try:
+        from pymongo import MongoClient
+
+        mongo_uri = os.getenv("MONGODB_URI")
+        if not mongo_uri:
+            raise HTTPException(
+                status_code=503,
+                detail="Message storage is not configured yet. Please email me directly.",
+            )
+
+        client = MongoClient(mongo_uri, serverSelectionTimeoutMS=5000)
+        client.admin.command("ping")
+        database_name = os.getenv("MONGODB_DATABASE", "portfolio")
+        collection_name = os.getenv("MONGODB_COLLECTION", "contact_messages")
+        result = client[database_name][collection_name].insert_one({
+            "name": req.name.strip(),
+            "email": req.email.strip(),
+            "message": req.message.strip(),
+            "created_at": datetime.now(timezone.utc),
+        })
+        client.close()
+    except Exception as error:
+        print(f"Contact message storage failed: {error}")
+        if isinstance(error, HTTPException):
+            raise
+        raise HTTPException(
+            status_code=500,
+            detail="Your message could not be saved right now. Please try again or email me directly.",
+        ) from error
+
+    return {"id": str(result.inserted_id), "message": "Your message was received and saved."}

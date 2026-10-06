@@ -1,4 +1,36 @@
+import { useState } from "react";
+
 const Contact = () => {
+  const [submissionStatus, setSubmissionStatus] = useState("idle");
+  const [submissionError, setSubmissionError] = useState("");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    setSubmissionStatus("sending");
+
+    const form = event.currentTarget;
+    const payload = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const response = await fetch("https://portfolio-website-1-swpq.onrender.com/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.detail || "Your message could not be sent. Please try again.");
+      }
+
+      setSubmissionStatus("sent");
+      form.reset();
+    } catch (error) {
+      setSubmissionStatus("error");
+      setSubmissionError(error.message);
+    }
+  }
+
   return (
     <main className="relative pt-32 pb-48 px-6 lg:px-0 overflow-hidden">
 
@@ -122,7 +154,7 @@ const Contact = () => {
                   </p>
 
                   <p className="text-xl font-headline font-bold">
-                    EMAIL
+                    YOUR_EMAIL
                   </p>
                 </div>
 
@@ -145,7 +177,7 @@ const Contact = () => {
             {/* Grid Background */}
             <div className="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-size-[20px_20px] -z-10"></div>
 
-            <form className="space-y-8">
+            <form className="space-y-8" onSubmit={handleSubmit}>
 
               {/* Inputs */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -159,6 +191,9 @@ const Contact = () => {
 
                   <input
                     type="text"
+                    name="name"
+                    autoComplete="name"
+                    required
                     placeholder="YOUR_NAME"
                     className="w-full bg-surface-container-highest/30 border border-white/10 focus:border-primary/50 rounded-xl px-4 py-4 text-on-surface placeholder:text-on-surface-variant/30 transition-all outline-none"
                   />
@@ -174,7 +209,10 @@ const Contact = () => {
 
                   <input
                     type="email"
-                    placeholder="COMM_PROTOCOL@HOST.IO"
+                    name="email"
+                    autoComplete="email"
+                    required
+                    placeholder="YOUR_EMAIL@HOST.COM"
                     className="w-full bg-surface-container-highest/30 border border-white/10 focus:border-primary/50 rounded-xl px-4 py-4 text-on-surface placeholder:text-on-surface-variant/30 transition-all outline-none"
                   />
 
@@ -191,6 +229,8 @@ const Contact = () => {
 
                 <textarea
                   rows="6"
+                  name="message"
+                  required
                   placeholder="TRANSMIT_DATA_HERE..."
                   className="w-full bg-surface-container-highest/30 border border-white/10 focus:border-primary/50 rounded-xl px-4 py-4 text-on-surface placeholder:text-on-surface-variant/30 transition-all outline-none resize-none"
                 />
@@ -203,13 +243,25 @@ const Contact = () => {
                 className="w-full py-5 bg-linear-to-r from-primary/80 to-primary-container/80 text-black rounded-xl font-headline font-bold text-sm tracking-[0.2em] uppercase hover:shadow-[0_0_30px_rgba(0,210,255,0.3)] hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-3"
               >
 
-                EXECUTE_TRANSMISSION
+                {submissionStatus === "sending" ? "SENDING..." : "SEND_MESSAGE"}
 
                 <span className="material-symbols-outlined text-lg">
                   send
                 </span>
 
               </button>
+
+              {submissionStatus === "sent" && (
+                <p role="status" className="text-center text-sm text-on-surface-variant">
+                  Your message was received. Thank you for reaching out!
+                </p>
+              )}
+
+              {submissionStatus === "error" && (
+                <p role="alert" className="text-center text-sm text-secondary">
+                  {submissionError} You can contact me directly at <a className="text-primary underline" href="mailto:architniranjan4455@gmail.com">architniranjan4455@gmail.com</a>.
+                </p>
+              )}
 
             </form>
 
