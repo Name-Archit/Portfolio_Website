@@ -99,7 +99,7 @@ const ProjectsMain = () => {
         <div className="md:col-span-4 group p-8 rounded-3xl border border-white/10 hover:border-secondary/30 hover:shadow-[0_0_50px_rgba(0,210,255,0.4)] transition duration-500">
           <div className="mb-6 aspect-square overflow-hidden rounded-xl">
             <img
-              src="/images/Project02.webp"
+              src="/images/Fast Mail.webp"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition"
             />           
           </div>
@@ -201,16 +201,16 @@ const ProjectsMain = () => {
 
             {/* RIGHT IMAGES */}
             <div className="md:w-2/3 grid grid-cols-2 gap-4">
-              <div className="aspect-video rounded-xl overflow-hidden group-hover:scale-[1.02] transition duration-500">
+              <div className="aspect-video rounded-xl border-white/10 hover:border-secondary/30 hover:shadow-[0_0_50px_rgba(0,210,255,0.4)] overflow-hidden group-hover:scale-[1.02] transition duration-500">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqHYJwmfzYrnKfMVPgFL_gcK7n8j2J8ZZApVFKkEtUw4uCMuys9v904mulB9BkR53zH2USbCv1KJxcFl-ghfBGpj4wG4XN6ie6nrFWyuG856BPzvao4aVsGsh12bhDemvMwfqclmefBPYE-4nkR-bnoYYFrXHlj78ED4oGFo4S4gBJ92QoUPJBgFLCKk4tyaJSEvALIzaoqq1aXzyJKKxjdkvsvEQfRB0EPl5iodlmQv4F3bBbJq_KT0TEaSyJWtrzTCoFE2gnpODE"
+                  src="/images/Website Repair.webp"
                   className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition duration-500"
                 />
               </div>
 
-              <div className="aspect-video rounded-xl overflow-hidden group-hover:scale-[1.02] transition duration-500 delay-75">
+              <div className="aspect-video rounded-xl overflow-hidden group-hover:scale-[1.02] border-white/10 hover:border-secondary/30 hover:shadow-[0_0_50px_rgba(0,210,255,0.4)] transition duration-500 delay-75">                
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhqWcvU7zseItI9dtwFWvxc_-Mo8IAnmjfXf0d_BkkZsa9h7wrf_Bq988Rdt5RQX_KvIg9Cs5llrS3cqns_oVe2maXPTHFagVc77b8of6wQbyOwaLAaJBfh7Fhja3tIs_ws_mp24r9DkgyFQMuAqiSSFPQbVGS53oPTELUaod58laj-wwgAeHv_aBDPUSA-bX0SIxsaF90EZ8dy_68-MOCRRT2DAB4JpDSA8mbgZgMnxt7Wjza3NFXygrJw2T-xrqwPRObnspILb2I"
+                  src="/images/Website_Repair-02.webp"
                   className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition duration-500"
                 />
               </div>
