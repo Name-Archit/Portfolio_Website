@@ -46,7 +46,7 @@ const ProjectsMain = () => {
             <div className="md:w-1/2 p-10 flex flex-col justify-between">
               <div>
                 <span className="text-[12px] text-secondary tracking-widest">
-                  01 // QUANTUM_CORE
+                  01 // PROJECT-01
                 </span>
 
                 <h2 className="font-headline text-3xl uppercase mt-4 mb-4">
@@ -80,13 +80,15 @@ const ProjectsMain = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <button className="flex-1 bg-linear-to-r from-primary to-primary-container text-on-primary py-3 rounded-xl text-xs font-bold uppercase">
-                  LIVE DEMO
+             <div className="flex gap-4">
+                <button className="px-8 py-3 cursor-pointer bg-linear-to-r from-white/70 to-white text-black rounded-xl text-xs font-bold uppercase tracking-widest hover:scale-105 transition">
+                  INITIALIZE_DEMO
                 </button>
 
-                <button className="flex-1 border border-white/20 py-3 rounded-xl text-xs uppercase">
-                  SOURCE CODE
+                <button className="p-3 border cursor-pointer border-white/20 rounded-xl hover:bg-white/10 transition">
+                  <span className="material-symbols-outlined text-sm">
+                    code
+                  </span>
                 </button>
               </div>
             </div>
@@ -99,19 +101,50 @@ const ProjectsMain = () => {
             <img
               src="/images/Project02.webp"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition"
-            />
+            />           
           </div>
-
-          <h2 className="font-headline text-2xl mb-3">VOID_SENTINEL</h2>
+             <span className="text-[12px] text-secondary tracking-widest">
+                  02 // PROJECT-02
+                </span>
+          <h2 className="font-headline text-2xl mb-3">FAST-MAIL.EXE</h2>
 
           <p className="text-sm text-on-surface-variant mb-4">
-            Intrusion detection using behavioral heuristics.
+            Ai-assisted email design to summarize your email and put it on one place with in priority order.
+            It is fast and effective way to manage your email in one place.
           </p>
 
-          <div className="flex gap-2">
-            <span className="text-xs text-secondary">Python</span>
-            <span className="text-xs text-secondary">AWS</span>
-          </div>
+        <div className="flex gap-2 mb-6 flex-wrap">
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    REACT
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    HTML
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    GMAIL-API
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    TAILWIND.CSS
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    VUE.JS
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    AI-ASSIST
+                  </span>
+                </div>
+
+          <div className="flex gap-4">
+                <button className="px-8 py-3 cursor-pointer bg-linear-to-r from-white/70 to-white text-black rounded-xl text-xs font-bold uppercase tracking-widest hover:scale-105 transition">
+                  INITIALIZE_DEMO
+                </button>
+
+                <button className="p-3 border cursor-pointer border-white/20 rounded-xl hover:bg-white/10 transition">
+                  <span className="material-symbols-outlined text-sm">
+                    code
+                  </span>
+                </button>
+              </div>
         </div>
 
         {/* PROJECT 3 */}
@@ -120,38 +153,45 @@ const ProjectsMain = () => {
             {/* LEFT CONTENT */}
             <div className="md:w-1/3">
               <div className="flex items-center gap-2 mb-4">
-                <span className="text-[10px] text-white/50 tracking-widest">
-                  03 // AI_ORCHESTRA
+               <span className="text-[12px] text-secondary tracking-widest">
+                  03 // PROJECT-03
                 </span>
               </div>
 
               <h2 className="font-headline text-3xl font-bold uppercase mb-4">
-                SYNAPSE_GRID
+                AUTO-REPAIR.EXE
               </h2>
 
               <p className="text-on-surface-variant text-sm mb-6">
-                A neural-network visualization engine providing real-time
-                telemetry of multi-agent cognitive environments.
+                A project which demonstrate the possibility of auto repairing the high latency, low perfomance all by own without shutting down the server.
+                This project has been built to purposely break tself and also auto diagnost the problem and repair itself with timestamp of all the process that
+                has been taken care of.
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-8">
-                <span className="px-3 py-1 bg-white/5 rounded-lg text-[10px] uppercase">
-                  Rust
-                </span>
-                <span className="px-3 py-1 bg-white/5 rounded-lg text-[10px] uppercase">
-                  WASM
-                </span>
-                <span className="px-3 py-1 bg-white/5 rounded-lg text-[10px] uppercase">
-                  Three.js
-                </span>
-              </div>
+             <div className="flex gap-2 mb-6 flex-wrap">
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    REACT
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    DOCKER
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    VITE
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    TAILWIND.CSS
+                  </span>
+                  <span className="px-3 py-1 bg-white/5 text-primary text-[10px] rounded-lg uppercase">
+                    VUE.JS
+                  </span>                  
+                </div>
 
               <div className="flex gap-4">
-                <button className="px-8 py-3 bg-linear-to-r from-white/70 to-white text-black rounded-xl text-xs font-bold uppercase tracking-widest hover:scale-105 transition">
-                  INITIALIZE
+                <button className="px-8 cursor-pointer py-3 bg-linear-to-r from-white/70 to-white text-black rounded-xl text-xs font-bold uppercase tracking-widest hover:scale-105 transition">
+                  INITIALIZE_DEMO
                 </button>
 
-                <button className="p-3 border border-white/20 rounded-xl hover:bg-white/10 transition">
+                <button className="p-3 border cursor-pointer border-white/20 rounded-xl hover:bg-white/10 transition">
                   <span className="material-symbols-outlined text-sm">
                     code
                   </span>
