@@ -81,15 +81,15 @@ const ProjectsMain = () => {
               </div>
 
              <div className="flex gap-4">
-                <button className="px-8 py-3 cursor-pointer bg-linear-to-r from-white/70 to-white text-black rounded-xl text-xs font-bold uppercase tracking-widest hover:scale-105 transition">
+                <a href="https://paper-trading-beige.vercel.app/" target="_blank" rel="noopener noreferrer" className="px-8 py-5 cursor-pointer bg-linear-to-r from-white/70 to-white text-black rounded-xl text-xs font-bold uppercase tracking-widest hover:scale-105 transition">
                   INITIALIZE_DEMO
-                </button>
+                </a>
 
-                <button className="p-3 border cursor-pointer border-white/20 rounded-xl hover:bg-white/10 transition">
+                <a href="https://github.com/Name-Archit/PaperTrading" target="_blank" rel="noopener noreferrer" aria-label="View Paper Trading source code on GitHub" className="p-3 border cursor-pointer border-white/20 rounded-xl hover:bg-white/10 transition">
                   <span className="material-symbols-outlined text-sm">
                     code
                   </span>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -134,16 +134,16 @@ const ProjectsMain = () => {
                   </span>
                 </div>
 
-          <div className="flex gap-4">
-                <button className="px-8 py-3 cursor-pointer bg-linear-to-r from-white/70 to-white text-black rounded-xl text-xs font-bold uppercase tracking-widest hover:scale-105 transition">
+         <div className="flex gap-4">
+                <a href="https://paper-trading-beige.vercel.app/" target="_blank" rel="noopener noreferrer" className="px-8 py-5 cursor-pointer bg-linear-to-r from-white/70 to-white text-black rounded-xl text-xs font-bold uppercase tracking-widest hover:scale-105 transition">
                   INITIALIZE_DEMO
-                </button>
+                </a>
 
-                <button className="p-3 border cursor-pointer border-white/20 rounded-xl hover:bg-white/10 transition">
+                <a href="https://github.com/Name-Archit/PaperTrading" target="_blank" rel="noopener noreferrer" aria-label="View Paper Trading source code on GitHub" className="p-3 border cursor-pointer border-white/20 rounded-xl hover:bg-white/10 transition">
                   <span className="material-symbols-outlined text-sm">
                     code
                   </span>
-                </button>
+                </a>
               </div>
         </div>
 
@@ -186,16 +186,16 @@ const ProjectsMain = () => {
                   </span>                  
                 </div>
 
-              <div className="flex gap-4">
-                <button className="px-8 cursor-pointer py-3 bg-linear-to-r from-white/70 to-white text-black rounded-xl text-xs font-bold uppercase tracking-widest hover:scale-105 transition">
+            <div className="flex gap-4">
+                <a href="https://paper-trading-beige.vercel.app/" target="_blank" rel="noopener noreferrer" className="px-8 py-5 cursor-pointer bg-linear-to-r from-white/70 to-white text-black rounded-xl text-xs font-bold uppercase tracking-widest hover:scale-105 transition">
                   INITIALIZE_DEMO
-                </button>
+                </a>
 
-                <button className="p-3 border cursor-pointer border-white/20 rounded-xl hover:bg-white/10 transition">
+                <a href="https://github.com/Name-Archit/PaperTrading" target="_blank" rel="noopener noreferrer" aria-label="View Paper Trading source code on GitHub" className="p-3 border cursor-pointer border-white/20 rounded-xl hover:bg-white/10 transition">
                   <span className="material-symbols-outlined text-sm">
                     code
                   </span>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -218,7 +218,7 @@ const ProjectsMain = () => {
           </div>
         </div>
       </div>
-    </main>
+    </main> 
   );
 };
 
