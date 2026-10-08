@@ -48,24 +48,24 @@ const Expertise = () => {
 
               <div className="flex flex-wrap gap-12">
                 <div>
-                  <span className="text-[10px] text-on-surface-variant">
+                  <span className="text-[15px] text-on-surface-variant">
                     MAX_RATING
                   </span>
-                  <p className="text-5xl text-primary font-bold">1606</p>
+                  <p className="text-5xl text-primary font-bold">1735</p>
                 </div>
 
                 <div>
-                  <span className="text-[10px] text-on-surface-variant">
+                  <span className="text-[15px] text-on-surface-variant">
                     PROBLEMS_SOLVED
                   </span>
-                  <p className="text-5xl font-bold">250+</p>
+                  <p className="text-5xl font-bold">260+</p>
                 </div>
 
                 <div className="ml-auto">
-                  <span className="text-[10px] text-on-surface-variant">
+                  <span className="text-[15px] text-on-surface-variant">
                     GLOBAL_RANK
                   </span>
-                  <p className="text-5xl text-secondary font-bold">TOP_21%</p>
+                  <p className="text-5xl text-secondary font-bold">TOP_11%</p>
                 </div>
               </div>
             </div>
@@ -77,7 +77,7 @@ const Expertise = () => {
             <div>
               <div className="flex justify-between mb-12">
                 <h2 className="text-4xl font-bold uppercase">
-                  CODECHEF_3_STAR
+                  CODECHEF_3⭐
                 </h2>
 
                 <span
@@ -90,21 +90,21 @@ const Expertise = () => {
 
               <div className="flex flex-wrap gap-12">
                 <div>
-                  <span className="text-[10px] text-on-surface-variant">
+                  <span className="text-[15px] text-on-surface-variant">
                     MAX_RATING
                   </span>
                   <p className="text-5xl text-primary font-bold">1733</p>
                 </div>
 
                 <div>
-                  <span className="text-[10px] text-on-surface-variant">
+                  <span className="text-[15px] text-on-surface-variant">
                     PROBLEMS_SOLVED
                   </span>
                   <p className="text-5xl font-bold">500+</p>
                 </div>
 
                 <div className="ml-auto">
-                  <span className="text-[10px] text-on-surface-variant">
+                  <span className="text-[15px] text-on-surface-variant">
                     GLOBAL_RANK
                   </span>
                   <p className="text-5xl text-secondary font-bold">6972</p>
