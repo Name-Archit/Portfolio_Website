@@ -209,7 +209,7 @@ const About = () => {
         {[
           {
             label: "LeetCode Rating",
-            val: "1733 (Top 11%)",
+            val: "1735 (Top 11%)",
             color: "text-primary",
           },
           {

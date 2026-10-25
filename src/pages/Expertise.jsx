@@ -58,7 +58,7 @@ const Expertise = () => {
                   <span className="text-[15px] text-on-surface-variant">
                     PROBLEMS_SOLVED
                   </span>
-                  <p className="text-5xl font-bold">260+</p>
+                  <p className="text-5xl font-bold">270+</p>
                 </div>
 
                 <div className="ml-auto">
