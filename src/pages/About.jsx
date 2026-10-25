@@ -209,12 +209,12 @@ const About = () => {
         {[
           {
             label: "LeetCode Rating",
-            val: "1606 (Top 22%)",
+            val: "1733 (Top 11%)",
             color: "text-primary",
           },
           {
             label: "LeetCode questions solved",
-            val: "240+",
+            val: "270+",
             color: "text-secondary",
           },
           { label: "CodeChef rating", val: "1733 (3*)", color: "text-primary" },
