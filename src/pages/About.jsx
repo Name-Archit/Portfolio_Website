@@ -105,11 +105,11 @@ const About = () => {
 
             {[
               { name: "C++", val: "99%" },
-              { name: "Go", val: "80%" },
-              { name: "JavaScript", val: "81%" },
-              { name: "HTML", val: "95%" },
-              { name: "CSS", val: "96%" },
-              { name: "Python", val: "85%" },
+              { name: "Go", val: "99%" },
+              { name: "JavaScript", val: "99%" },
+              { name: "HTML", val: "99%" },
+              { name: "CSS", val: "99%" },
+              { name: "Python", val: "99%" },
             ].map((item) => (
               <div key={item.name} className="space-y-1 mb-4">
                 <div className="flex justify-between text-xs uppercase">
@@ -144,11 +144,11 @@ const About = () => {
             <h3 className="text-2xl font-bold uppercase mb-6">Frameworks</h3>
 
             {[
-              { name: "React", val: "90%" },
-              { name: "Node.js", val: "85%" },
-              { name: "Express", val: "80%" },
-              { name: "Next.js", val: "87%" },
-              { name: "Tailwind CSS", val: "90%" },
+              { name: "React", val: "99%" },
+              { name: "Node.js", val: "99%" },
+              { name: "Express", val: "99%" },
+              { name: "Next.js", val: "99%" },
+              { name: "Tailwind CSS", val: "99%" },
             ].map((item) => (
               <div key={item.name} className="space-y-1 mb-4">
                 <div className="flex justify-between text-xs uppercase">
